@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: red;  /* Example Primary Color */
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.hover-primary:hover {
+  background-color: var(--primary-color);
+  color: white; /* optional if you want text to change */
+  transition: background-color 0.2s ease;
+}
