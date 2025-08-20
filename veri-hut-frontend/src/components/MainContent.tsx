@@ -1,68 +1,71 @@
-// src/components/MainContent.tsx
 import { useState } from "react";
 import Getcontent from "./Getcontent";
 
 const MainContent = () => {
   const [text, setText] = useState("");
-  const [media, setMedia] = useState<File | null>(null);
+  const [media, setMedia] = useState<File[]>([]);  // Array to handle multiple files
+  const [mediaPreviews, setMediaPreviews] = useState<string[]>([]); // Previews for each file
+  const [isEditing, setIsEditing] = useState(false); // To track editing media
 
   // Handle the text input change
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
+    const v = e.target.value;
+    if (v.length <= 1000) setText(v);
   };
 
-  // Handle media file input change
+  // Handle media file input change (supports multiple file uploads)
   const handleMediaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setMedia(e.target.files[0]);
-    }
+    if (!e.target.files) return;
+    const newFiles = Array.from(e.target.files);
+    const newPreviews = newFiles.map(file => URL.createObjectURL(file));
+
+    setMedia(prev => [...prev, ...newFiles]);
+    setMediaPreviews(prev => [...prev, ...newPreviews]);
+  };
+
+  // Handle media edit (remove or change media)
+  const handleMediaEdit = (index: number) => {
+    const newMedia = [...media];
+    const newPreviews = [...mediaPreviews];
+
+    // Remove the selected file and its preview
+    newMedia.splice(index, 1);
+    newPreviews.splice(index, 1);
+
+    setMedia(newMedia);
+    setMediaPreviews(newPreviews);
   };
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    //const formData = new FormData();
-    //for (const [key, value] of Object.entries(formData)) {
-      //if (key === "media") {
-        //formData.append("key", value);
-     //   } else {
-       // formData.append(key, value);
-        //}
-    //}
     const formData = new FormData();
     formData.append("text", text);
-    if (media) {
-        formData.append("media", media);
-    }
+    media.forEach(file => {
+      formData.append("media", file);
+    });
 
     try {
-      // Send data to backend API (Django REST)
-      const response = await fetch("http://127.0.0.1:8000/api/posts/", {
+      const res = await fetch("http://127.0.0.1:8000/api/posts/", {
         method: "POST",
         body: formData,
       });
+      if (!res.ok) throw new Error(await res.text());
 
-      // Check if the response is okay
-      if (!response.ok) {
-        throw new Error("Failed to submit post");
-      } else {
-        const data = await response.json();
-        console.log("Post created:", data);
-      }
-
-      // Clear the form after submission
+      // Clear form
       setText("");
-      setMedia(null);
-      alert("Post created successfully!");
-    } catch (error) {
-      alert("Error creating post: " + error);
+      setMedia([]);
+      setMediaPreviews([]);
+      setIsEditing(false); // Reset editing state after posting
+    } catch (err: any) {
+      alert("Error creating post: " + (err?.message || err));
     }
   };
 
   return (
     <div className="flex-1 p-6 overflow-auto">
-      <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-lg">
+      <div className="flex items-center space-x-4 bg-white p-4 rounded-2xl shadow-lg">
         {/* Avatar */}
         <div className="bg-gray-300 w-10 h-10 rounded-full"></div>
 
@@ -72,33 +75,67 @@ const MainContent = () => {
           placeholder="What's on your mind..."
           value={text}
           onChange={handleTextChange}
-          className="flex-1 p-2 border border-gray-300 rounded-md"
+          maxLength={1000}
+          className="flex-1 p-3 rounded-full border border-neutral-200 focus:outline-none"
         />
 
         {/* Buttons */}
-        <div className="flex space-x-4 items-center">
+        <div className="flex items-center gap-3">
           <label htmlFor="media" className="cursor-pointer">
-            <span className="text-green-500 text-2xl">📷</span> {/* Image/Video Icon */}
             <input
-              type="file"
               id="media"
+              type="file"
               accept="image/*,video/*"
               onChange={handleMediaChange}
+              multiple // Allow multiple files
               className="hidden"
             />
+            <span className="text-2xl">🖼️</span>
           </label>
 
-          <span className="text-yellow-500 text-2xl cursor-pointer">😊</span> {/* Emoji Icon */}
-
-          {/* Post Button */}
           <button
             onClick={handleSubmit}
-            className="bg-red-500 text-white px-4 py-2 rounded-md"
+            className="px-5 py-2 rounded-full bg-rose-400 text-white font-medium"
           >
             Post
           </button>
         </div>
       </div>
+
+      {/* Media Preview and Editing */}
+      {mediaPreviews.length > 0 && (
+        <div className="mt-3 space-y-3">
+          {mediaPreviews.map((preview, index) => (
+            <div key={index} className="flex justify-between items-center">
+              <div className="flex-1">
+                {/* Display image or video */}
+                {preview.match(/\.(mp4|webm|ogg)$/i) ? (
+                  <video
+                    src={preview}
+                    controls
+                    className="max-h-60 object-cover rounded-lg"
+                  />
+                ) : (
+                  <img
+                    src={preview}
+                    alt="preview"
+                    className="max-h-60 object-cover rounded-lg"
+                  />
+                )}
+              </div>
+
+              <button
+                onClick={() => handleMediaEdit(index)}
+                className="text-red-500 px-2 py-1 rounded-full bg-gray-200"
+              >
+                Edit
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <Getcontent refreshKey={0} />
     </div>
   );
 };

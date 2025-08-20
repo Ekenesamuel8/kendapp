@@ -27,7 +27,6 @@ export default function App() {
           
 
             <MainContent />
-                  <Getcontent />
             <RightSidebar />
         
       </div>
