@@ -2,7 +2,7 @@
 "use client";  // This file is a client component
 import { useState } from "react";
 import Link from "next/link";
-import { FaBell, FaBookmark } from "react-icons/fa6";
+import { FiBell, FiBookmark } from "react-icons/fi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,11 +33,11 @@ const Navbar = () => {
 
           
           <div className="flex items-center p-2 px-2 rounded-md mx-4">
-            <Link href="#"><FaBell className="w-5 h-4 hover:text-red-500" /></Link>
+            <Link href="#"><FiBell className="w-5 h-4 hover:text-red-500" /></Link>
           </div>
 
           <div className="flex items-center p-2 px-2 rounded-md mx-4">
-            <Link href="#"><FaBookmark className="w-5 h-4 hover:text-red-500" /></Link>
+            <Link href="#"><FiBookmark className="w-5 h-4 hover:text-red-500" /></Link>
           </div>
           
           
