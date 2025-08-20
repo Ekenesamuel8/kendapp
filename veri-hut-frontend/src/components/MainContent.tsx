@@ -1,11 +1,15 @@
 import { useState } from "react";
 import Getcontent from "./Getcontent";
+import { FiImage } from "react-icons/fi";
 
 const MainContent = () => {
   const [text, setText] = useState("");
   const [media, setMedia] = useState<File[]>([]);  // Array to handle multiple files
   const [mediaPreviews, setMediaPreviews] = useState<string[]>([]); // Previews for each file
   const [isEditing, setIsEditing] = useState(false); // To track editing media
+
+  // 🔑 bump this number to tell <Getcontent/> to refetch
+  const [feedVersion, setFeedVersion] = useState(0);
 
   // Handle the text input change
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,30 +62,128 @@ const MainContent = () => {
       setMedia([]);
       setMediaPreviews([]);
       setIsEditing(false); // Reset editing state after posting
+      setFeedVersion(v => v + 1); // Trigger re-fetch of posts
     } catch (err: any) {
       alert("Error creating post: " + (err?.message || err));
     }
   };
 
   return (
-    <div className="flex-1 p-6 overflow-auto">
-      <div className="flex items-center space-x-4 bg-white p-4 rounded-2xl shadow-lg">
-        {/* Avatar */}
-        <div className="bg-gray-300 w-10 h-10 rounded-full"></div>
+    <div className="flex-1 p-6 overflow-auto space-y-2">
+      <div className="w-full space-y-1">
+        {/* STORIES ROW */}
+        <div className="flex items-center gap-4 overflow-x-auto px-4 py-3 no-scrollbar p-2 rounded-lg shadow-md bg-white">
+          {/* Story 1 (you) with + badge */}
+          <div className="relative shrink-0">
+            <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
+              <div className="rounded-full bg-white p-1">
+                <img
+                  src="/avatars/me.png"
+                  alt="me"
+                  className="size-16 rounded-full object-cover bg-amber-200"
+                />
+              </div>
+            </div>
+            <span className="absolute -bottom-1 -right-1 size-7 rounded-full bg-rose-400 grid place-items-center ring-4 ring-white">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </span>
+          </div>
 
-        {/* Post input field */}
-        <input
-          type="text"
-          placeholder="What's on your mind..."
-          value={text}
-          onChange={handleTextChange}
-          maxLength={1000}
-          className="flex-1 p-3 rounded-full border border-neutral-200 focus:outline-none"
-        />
+          {/* Story 2 */}
+          <div className="shrink-0">
+            <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
+              <div className="rounded-full bg-white p-1">
+                <img src="/avatars/a.png" alt="" className="size-16 rounded-full object-cover" />
+              </div>
+            </div>
+          </div>
 
-        {/* Buttons */}
-        <div className="flex items-center gap-3">
-          <label htmlFor="media" className="cursor-pointer">
+          {/* Story 3 */}
+          <div className="shrink-0">
+            <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
+              <div className="rounded-full bg-white p-1">
+                <img src="/avatars/b.png" alt="" className="size-16 rounded-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          {/* Story 4 (inactive light ring) */}
+          <div className="shrink-0">
+            <div className="p-[3px] rounded-full bg-neutral-200">
+              <div className="rounded-full bg-white p-1">
+                <img src="/avatars/c.png" alt="" className="size-16 rounded-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          {/* Story 5 */}
+          <div className="shrink-0">
+            <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
+              <div className="rounded-full bg-white p-1">
+                <img src="/avatars/d.png" alt="" className="size-16 rounded-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          {/* Story 6 (purple ring example) */}
+          <div className="shrink-0">
+            <div className="p-[3px] rounded-full bg-gradient-to-tr from-purple-500 to-indigo-400">
+              <div className="rounded-full bg-white p-1">
+                <img src="/avatars/e.png" alt="" className="size-16 rounded-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* TABS + THICK ROUNDED SEPARATORS */}
+        <div className="px-3 p-1 rounded-lg shadow-md bg-white">
+          <div className="grid grid-cols-3 text-center py-3">
+            <div className="text-md font-semibold text-neutral-900">Verihut</div>
+            <div className="text-md text-neutral-500">Following</div>
+            <div className="text-md text-neutral-500">Videos</div>
+          </div>
+        </div>
+
+        {/* Hide scrollbar on WebKit */}
+        <style jsx>{`
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .size-16 { width: 4rem; height: 4rem; }
+          .size-7 { width: 1.75rem; height: 1.75rem; }
+        `}</style>
+      
+        <div className="space-x-4 bg-white p-4 rounded-2xl shadow-lg">
+          <div className="flex items-center gap-3">
+            {/* Avatar */}
+            <div className="bg-gray-300 w-10 h-10 rounded-full"></div>
+
+            {/* Post input field */}
+            <input
+              type="text"
+              placeholder="What's on your mind..."
+              value={text}
+              onChange={handleTextChange}
+              maxLength={1000}
+              className="flex-1 p-3 rounded-full border border-neutral-200 focus:outline-none"
+            />
+
+            {/* Buttons */}
+            <div className="flex items-center gap-3">
+              
+
+              <button
+                onClick={handleSubmit}
+                className="px-5 py-2 rounded-full bg-rose-400 text-white font-medium"
+              >
+                Post
+              </button>
+            </div>
+          </div>
+          <div className="flex items-center gap-6 pl-12">
+            <label htmlFor="media" className="cursor-pointer">
             <input
               id="media"
               type="file"
@@ -90,15 +192,29 @@ const MainContent = () => {
               multiple // Allow multiple files
               className="hidden"
             />
-            <span className="text-2xl">🖼️</span>
+            <div className="flex items-center gap-2 text-sm">
+              <FiImage className="w-6 h-6 text-green-600" /> Image/Video
+            </div>
           </label>
+            <button className="flex items-center gap-2 text-sm text-neutral-600">
+              <span className="text-yellow-500 text-xl">😊</span> Emoji
+            </button>
 
-          <button
-            onClick={handleSubmit}
-            className="px-5 py-2 rounded-full bg-rose-400 text-white font-medium"
-          >
-            Post
-          </button>
+            <div className="flex items-center gap-3 ml-auto">
+              {/* pink plus */}
+              <button className="w-5 h-5 rounded-full bg-rose-400 text-white grid place-items-center">
+                +
+              </button>
+              {/* pink circle */}
+              <button className="w-5 h-5 rounded-full bg-rose-400 text-white grid place-items-center">
+                .
+              </button>
+              {/* Public dropdown */}
+              <div className="flex items-center gap-1 text-sm text-neutral-500 cursor-pointer">
+                Public <span>▾</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -135,7 +251,7 @@ const MainContent = () => {
         </div>
       )}
 
-      <Getcontent refreshKey={0} />
+      <Getcontent refreshKey={feedVersion} />
     </div>
   );
 };

@@ -13,12 +13,12 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`w-70 h-screen bg-white dark:bg-gray-800 shadow-md top-0 left-0 p-4 m-5  ${
+      className={`w-100 h-screen bg-white dark:bg-gray-800 shadow-md top-0 left-0 p-4 m-3  ${
         isDarkMode ? "text-white" : "text-black"
       }`}
     >
       {/* Icon Section */}
-      <div className="flex justify-left mb-2 mt-6">
+      <div className="flex justify-left mb-2 mt-4">
         <div className="w-12 h-12 bg-red-500 rounded-full flex justify-center items-center">
           <FaHome className="w-5 h-5 text-white" />
         </div>
@@ -29,13 +29,6 @@ const Sidebar = () => {
           <div className="flex items-center space-x-2 cursor-pointer p-2 rounded-full hover-primary">
             <FaHome className="w-5 h-4" />
             <span className="text-sm font-light">Hut</span>
-          </div>
-        </Link>
-
-        <Link href="#" passHref>
-          <div className="flex items-center space-x-2 cursor-pointer p-2 rounded-full hover-primary">
-            <FaCompass className="w-5 h-5" />
-            <span className="text-sm font-light">Explore</span>
           </div>
         </Link>
 

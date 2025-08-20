@@ -2,6 +2,7 @@
 "use client";
 import "@/app/globals.css";  // Import Tailwind and global styles
 import Navbar from '@/components/Navbar';
+import RightSidebar from "@/components/RightSidebar";
 import Sidebar from '@/components/Sidebar';
 
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="w-full"> {/* This adds the left margin equal to the sidebar width */}
               <main>{children}</main>
             </div>
+            <RightSidebar />    
           </div>
 
         </body>
