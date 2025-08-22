@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function RightSidebar() {
   return (
-    <div className="flex flex-col space-y-2 p-2 max-w-md mx-auto w-150">
+    <div className="flex flex-col space-y-2 p-2 max-w-md mx-auto w-80">
       {/* Search Bar */}
       <div className="bg-white p-2 rounded-lg shadow-md">
         <input

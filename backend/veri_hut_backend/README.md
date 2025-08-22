@@ -30,3 +30,11 @@ cd veri_hut_backend
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+
+
+## structure
+backend/
+│── veri_hut_backend/   # Main Django project
+│── posts/              # App handling user posts
+│── manage.py
+│── requirements.txt

@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`w-100 h-screen bg-white dark:bg-gray-800 shadow-md top-0 left-0 p-4 m-3  ${
+      className={`w-70 bg-white dark:bg-gray-800 shadow-md top-0 left-0 p-4 m-3  ${
         isDarkMode ? "text-white" : "text-black"
       }`}
     >
@@ -25,14 +25,14 @@ const Sidebar = () => {
       </div>
 
       <div className="space-y-4">
-        <Link href="#" passHref>
+        <Link href="/">
           <div className="flex items-center space-x-2 cursor-pointer p-2 rounded-full hover-primary">
             <FiHome className="w-5 h-4" />
             <span className="text-sm font-light">Hut</span>
           </div>
         </Link>
 
-        <Link href="#" passHref>
+        <Link href="/Notification">
           <div className="flex items-center space-x-2 cursor-pointer p-2 rounded-full hover-primary">
             <FiBell className="w-5 h-4" />
             <span className="text-sm font-light">Notification</span>

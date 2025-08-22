@@ -72,7 +72,7 @@ const MainContent = () => {
     <div className="flex-1 p-6 overflow-auto space-y-2">
       <div className="w-full space-y-1">
         {/* STORIES ROW */}
-        <div className="flex items-center gap-4 overflow-x-auto px-4 py-3 no-scrollbar p-2 rounded-lg shadow-md bg-white">
+        <div className="flex items-center gap-9 overflow-x-auto px-4 py-3 no-scrollbar p-2 rounded-lg shadow-md bg-white">
           {/* Story 1 (you) with + badge */}
           <div className="relative shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
@@ -80,7 +80,7 @@ const MainContent = () => {
                 <img
                   src="/avatars/me.png"
                   alt="me"
-                  className="size-16 rounded-full object-cover bg-amber-200"
+                  className="size-10 rounded-full object-cover bg-amber-200"
                 />
               </div>
             </div>
@@ -95,7 +95,7 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
               <div className="rounded-full bg-white p-1">
-                <img src="/avatars/a.png" alt="" className="size-16 rounded-full object-cover" />
+                <img src="/avatars/a.png" alt="" className="size-10 rounded-full object-cover" />
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
               <div className="rounded-full bg-white p-1">
-                <img src="/avatars/b.png" alt="" className="size-16 rounded-full object-cover" />
+                <img src="/avatars/b.png" alt="" className="size-10 rounded-full object-cover" />
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-neutral-200">
               <div className="rounded-full bg-white p-1">
-                <img src="/avatars/c.png" alt="" className="size-16 rounded-full object-cover" />
+                <img src="/avatars/c.png" alt="" className="size-10 rounded-full object-cover" />
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
               <div className="rounded-full bg-white p-1">
-                <img src="/avatars/d.png" alt="" className="size-16 rounded-full object-cover" />
+                <img src="/avatars/d.png" alt="" className="size-10 rounded-full object-cover" />
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-purple-500 to-indigo-400">
               <div className="rounded-full bg-white p-1">
-                <img src="/avatars/e.png" alt="" className="size-16 rounded-full object-cover" />
+                <img src="/avatars/e.png" alt="" className="size-10 rounded-full object-cover" />
               </div>
             </div>
           </div>
