@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <main className="p-2">{children}</main>
             </div>
             <aside
-            className="w-80 shrink-0 sticky top-16 h-[calc(100vh-64px)] overflow-y-auto border-l border-neutral-200/60 bg-white dark:bg-black "
+            className="w-85 shrink-0 sticky top-16 h-[calc(100vh-64px)] overflow-y-auto border-neutral-200/60 bg-white dark:bg-black "
             >
               <RightSidebar />
             </aside>    
