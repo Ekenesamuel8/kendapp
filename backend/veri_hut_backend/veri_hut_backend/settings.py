@@ -81,7 +81,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'veri_hut_backend.wsgi.application'
 
-
+#AUTH_USER_MODEL = 'posts.CustomUser'
 
 
 # Database
@@ -112,7 +112,16 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+"""
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'posts.authentication.WalletAuthentication',  # Custom Wallet Authentication
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/

@@ -3,6 +3,11 @@ import { useState } from "react";
 import Getcontent from "./Getcontent";
 import VideoFeed from "./VideoFeed";
 import { FiImage } from "react-icons/fi";
+import Image from "next/image";
+import Avatar_one from "../../public/avatars/1.png";
+import Avatar_two from "../../public/avatars/2.png";
+import Avatar_three from "../../public/avatars/3.png";
+import Avatar_four from "../../public/avatars/4.png";
 
 type Tab = "Verihut" | "Following" | "Videos";
 
@@ -68,10 +73,10 @@ const MainContent = () => {
           <div className="relative shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
               <div className="rounded-full bg-white p-1">
-                <img
-                  src="/avatars/me.png"
-                  alt="me"
-                  className="size-16 rounded-full object-cover bg-amber-200"
+                <Image
+                src={Avatar_one}
+                alt="Profile_Avatar"
+                className="w-10 h-10 bg-[#ABC5DE] rounded-full"
                 />
               </div>
             </div>
@@ -94,10 +99,10 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
               <div className="rounded-full bg-white p-1">
-                <img
-                  src="/avatars/a.png"
-                  alt=""
-                  className="size-16 rounded-full object-cover"
+                <Image
+                src={Avatar_one}
+                alt="Profile_Avatar"
+                className="w-10 h-10 bg-[#ABC5DE] rounded-full"
                 />
               </div>
             </div>
@@ -107,10 +112,10 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
               <div className="rounded-full bg-white p-1">
-                <img
-                  src="/avatars/b.png"
-                  alt=""
-                  className="size-16 rounded-full object-cover"
+                <Image
+                src={Avatar_one}
+                alt="Profile_Avatar"
+                className="w-10 h-10 bg-[#ABC5DE] rounded-full"
                 />
               </div>
             </div>
@@ -120,10 +125,10 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-neutral-200">
               <div className="rounded-full bg-white p-1">
-                <img
-                  src="/avatars/c.png"
-                  alt=""
-                  className="size-16 rounded-full object-cover"
+                <Image
+                src={Avatar_two}
+                alt="Profile_Avatar"
+                className="w-10 h-10 bg-[#ABC5DE] rounded-full"
                 />
               </div>
             </div>
@@ -133,10 +138,10 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-rose-500 to-rose-300">
               <div className="rounded-full bg-white p-1">
-                <img
-                  src="/avatars/d.png"
-                  alt=""
-                  className="size-16 rounded-full object-cover"
+                <Image
+                src={Avatar_four}
+                alt="Profile_Avatar"
+                className="w-10 h-10 bg-[#ABC5DE] rounded-full"
                 />
               </div>
             </div>
@@ -146,10 +151,10 @@ const MainContent = () => {
           <div className="shrink-0">
             <div className="p-[3px] rounded-full bg-gradient-to-tr from-purple-500 to-indigo-400">
               <div className="rounded-full bg-white p-1">
-                <img
-                  src="/avatars/e.png"
-                  alt=""
-                  className="size-16 rounded-full object-cover"
+                <Image
+                src={Avatar_three}
+                alt="Profile_Avatar"
+                className="w-10 h-10 bg-[#ABC5DE] rounded-full"
                 />
               </div>
             </div>

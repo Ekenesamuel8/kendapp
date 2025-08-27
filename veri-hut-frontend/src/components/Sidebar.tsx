@@ -31,7 +31,7 @@ const Sidebar = () => {
     <div className="flex flex-col">
       <div
         className={
-          "w-100 h-fit bg-white shadow-md rounded-lg top-0 left-0 py-6 px-4 m-3 relative"
+          "w-80 h-fit bg-white shadow-md rounded-lg top-0 left-0 py-6 px-4 m-3 relative"
         }
         onClick={() => setMore(false)}
       >
@@ -205,7 +205,7 @@ const Sidebar = () => {
       </div>
 
       {/* mini profile */}
-      <div className="w-100 h-fit bg-white shadow-md rounded-lg top-0 left-0 p-4 m-3">
+      <div className="w-80 h-fit bg-white shadow-md rounded-lg top-0 left-0 p-4 m-3">
         <div className="bg-[#F8F8F8] h-fit gap-10 p-6 flex flex-col rounded-lg">
           <div className="flex justify-between items-center">
             <div className="flex gap-2 items-center">

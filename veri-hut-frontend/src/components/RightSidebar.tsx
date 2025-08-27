@@ -10,7 +10,7 @@ import Avatar_four from "../../public/avatars/4.png";
 
 export default function RightSidebar() {
   return (
-    <div className="flex flex-col space-y-3 p-2 max-w-md mx-auto m-3 w-150 bg-white">
+    <div className="flex flex-col space-y-3 p-2 max-w-md mx-auto m-3 w-80 bg-white">
       {/* Search Bar */}
       <div className="w-full flex flex-row pl-4 items-center rounded-xl border-[0.5px] border-[#BFBFBF] bg-[#F8F8F8]">
         <FiSearch />
