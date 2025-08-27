@@ -9,24 +9,28 @@ import {
 } from "react-icons/fi";
 
 type UserMini = {
-  name?: string;        // e.g. "Kelvin Nita"
-  username?: string;    // e.g. "kelnita"
-  avatar_url?: string;  // absolute URL
+  name?: string; // e.g. "Kelvin Nita"
+  username?: string; // e.g. "kelnita"
+  avatar_url?: string; // absolute URL
 };
 
 type Post = {
   id: number | string;
   text: string;
-  media?: string | null;     // optional image/video
-  created_at?: string;           // ISO string from your API
-  user?: UserMini;               // optional nested user
+  media?: string | null; // optional image/video
+  created_at?: string; // ISO string from your API
+  user?: UserMini; // optional nested user
   comments_count?: number;
   reposts_count?: number;
   likes_count?: number;
   bookmarks_count?: number;
 };
 
-export default function Getcontent({ refreshKey = 0 }: { refreshKey?: number }) {
+export default function Getcontent({
+  refreshKey = 0,
+}: {
+  refreshKey?: number;
+}) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -68,7 +72,9 @@ export default function Getcontent({ refreshKey = 0 }: { refreshKey?: number }) 
       ))}
 
       {!loading && posts.length === 0 && (
-        <div className="text-center text-neutral-500 text-sm">No posts yet.</div>
+        <div className="text-center text-neutral-500 text-sm">
+          No posts yet.
+        </div>
       )}
     </div>
   );
@@ -104,7 +110,9 @@ function Card({ post }: { post: Post }) {
         />
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-[15px] text-neutral-900">{name}</span>
+            <span className="font-semibold text-[15px] text-neutral-900">
+              {name}
+            </span>
             <span className="text-neutral-500 text-sm">{time}</span>
           </div>
           <div className="text-neutral-500 text-sm leading-tight">{handle}</div>
@@ -120,9 +128,7 @@ function Card({ post }: { post: Post }) {
 
       {/* text */}
       {text && (
-        <p className="mt-3 text-[15px] leading-6 text-neutral-900">
-          {text}
-        </p>
+        <p className="mt-3 text-[15px] leading-6 text-neutral-900">{text}</p>
       )}
 
       {/* media (optional) */}
