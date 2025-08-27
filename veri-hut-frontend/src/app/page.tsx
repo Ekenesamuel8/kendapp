@@ -1,4 +1,4 @@
-"use client";  // This file is a client component
+"use client"; // This file is a client component
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
@@ -22,14 +22,8 @@ export default function App() {
   return (
     <div className={isDarkMode ? "dark" : ""}>
       <div className="flex h-screen">
-        
-        
-          
-
-            <MainContent />
-        
+        <MainContent />
       </div>
     </div>
-    
   );
 }
