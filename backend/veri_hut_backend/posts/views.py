@@ -2,19 +2,21 @@
 
 from rest_framework.decorators import api_view, parser_classes
 from rest_framework.response import Response
-#from rest_framework import status
+from rest_framework import status
 from .models import Post#, Wallet
 from .serializers import PostSerializer#, CustomUserSerializer
 from rest_framework import viewsets
 from rest_framework.parsers import MultiPartParser, FormParser
-#from rest_framework.permissions import IsAuthenticated, BasePermission
-#from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, BasePermission
+from rest_framework.views import APIView
 
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     parser_classes = [MultiPartParser, FormParser]
+    #permission_classes = [IsAuthenticatedOrReadOnly]  # Ensure authentication is required
+
 
 
 """
@@ -30,11 +32,11 @@ class VerifyWalletView(APIView):
         # Get the user from the authenticated request
         user = request.user
 
+        print("Authenticated user:", user.username)  # Log the authenticated user
+        print("User wallet address:", user.wallets.first().wallet_address if user.wallets.exists() else "No wallet linked")  # Log the wallet address
+
         # Return user details along with the associated wallet addresses
         user_data = CustomUserSerializer(user).data
         return Response(user_data, status=status.HTTP_200_OK)
-
-
-
 
 """

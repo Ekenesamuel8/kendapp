@@ -1,5 +1,5 @@
 from django.db import models
-#from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser
 
 # posts/models.py
 
@@ -28,4 +28,4 @@ class Wallet(models.Model):
 
     def __str__(self):
         return f"Wallet {self.wallet_address} for {self.user.username}"
-        """
+"""

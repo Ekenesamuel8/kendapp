@@ -11,7 +11,7 @@ It combines **user-generated content, live streaming, monetization, video clippi
 Most hackathon projects never make it past a demo. **Veri Hut is different**:  
 - We’re building a **real product** with **real-world utility**.  
 - Designed for **creators who want ownership** of their content and earnings.  
-- Built for **users who want more than likes** — they can earn, play, and engage.  
+- Built for **users who want more than likes** — they can Create, Earn, Sell and Engage.  
 
 ---
 
@@ -35,10 +35,41 @@ Most hackathon projects never make it past a demo. **Veri Hut is different**:
    - Clips stored on **IPFS/Arweave** for permanence.  
    - Clips can be tipped, shared, or remixed.  
 
-5. **Mini-Gaming Integration**  
-   - Built-in HTML5/Unity mini-games inside streams.  
-   - Token rewards for top players.  
+5. **Mini-App Integration**  
+   -The Mini App feature allows any developer building on VeryChain to list their dApp or product inside Verihut.
+   - Creators can discover these mini apps, create content around them (posts, streams, clips), and earn points or commissions.
+   - Users can engage with mini apps directly through creator content, boosting adoption and usage.
+   who actively promote or engage with mini apps rack up points, helping them climb the leaderboard and gain visibility/rewards.
 
+6. **Leaderboard Feature (Gamified Social + Commerce)**
+   -The leaderboard is designed to reward activity, visibility, and performance across Verihut. It motivates creators, merchants, and even fans to stay engaged.
+   
+   **How it works:**
+   Creators:
+   - Ranked based on content engagement (likes, shares, tips, purchases driven).
+   - Top creators get featured spots (homepage, discovery feed).
+   -  Higher rank → higher visibility → more chances to earn.
+
+   Merchants:
+   - Ranked by sales, product popularity, and creator collaborations.
+   - Merchants in the leaderboard get boosted exposure to fans.
+   - Encourages merchants to partner with creators.
+
+   Fans/Users:
+   - Ranked by engagement (tipping, commenting, sharing, buying).
+   - Active fans get badges or small rewards (discounts, tokens, early access).
+
+   **Why it matters:**
+   -  Pushes creators to post more & collaborate with merchants.
+   -  Encourages merchants to reward creators fairly.
+   -  Gives fans a reason to engage beyond passive scrolling.
+
+7  **VeriShop (Merchant Shops)**
+   -  Merchants can list a product (photo + description + price).
+   -  Buyers can click → see product → “Buy Now” with instant payment (crypto) (Fiat coming ) 
+
+   -  Creators can collaborate with merchants by promoting products using their unique referral links. - -  When buyers purchase through these links, the merchant makes the sale while the creator earns a commission aligning incentives for both sides.
+   
 ---
 
 ## 💰 Token Economy
