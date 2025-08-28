@@ -49,7 +49,7 @@ const MainContent = () => {
     media.forEach((file) => formData.append("media", file));
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/posts/", {
+      const res = await fetch("https://kendapp.onrender.com/api/posts/", {
         method: "POST",
         body: formData,
       });

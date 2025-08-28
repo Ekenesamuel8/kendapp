@@ -37,7 +37,7 @@ export default function Getcontent({
   const fetchPosts = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://127.0.0.1:8000/api/posts/", {
+      const res = await fetch("https://kendapp.onrender.com/api/posts/", {
         cache: "no-store",
       });
       const data: Post[] = await res.json();
