@@ -113,7 +113,7 @@ export default function LivePage() {
                 {/* Media */}
                 <div className="relative">
                   <div className="relative w-full h-56 sm:h-72 md:h-80 bg-zinc-200 dark:bg-zinc-800">
-                    <img
+                    <Image
                       src={s.image}
                       alt={s.title ?? "stream"}
                       fill
@@ -173,7 +173,7 @@ export default function LivePage() {
       <CreateStreamModal
         open={open}
         onClose={() => setOpen(false)}
-        onContinue={(data) => {
+        onSaved={(data) => {
           console.log("Create stream:", data);
           setOpen(false);
         }}
