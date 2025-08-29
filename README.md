@@ -127,3 +127,7 @@ python manage.py migrate
 python manage.py runserver
 Open [http://localhost:8000] with your browser to see the result.
 
+
+###Social Handle
+   Follow us fo more update
+   -  https://x.com/verihut_?s=21
