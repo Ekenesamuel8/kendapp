@@ -69,6 +69,9 @@ Most hackathon projects never make it past a demo. **Veri Hut is different**:
    -  Buyers can click → see product → “Buy Now” with instant payment (crypto) (Fiat coming ) 
 
    -  Creators can collaborate with merchants by promoting products using their unique referral links. - -  When buyers purchase through these links, the merchant makes the sale while the creator earns a commission aligning incentives for both sides.
+
+8  **wallet** 
+   -  The verychain wallet will be integrated in the VeriHut platform so that users, fans and creators can be able make purchases, tip and also send/receive money to/from friends while in the platform.
    
 ---
 
@@ -130,4 +133,13 @@ Open [http://localhost:8000] with your browser to see the result.
 
 ###Social Handle
    Follow us fo more update
-   -  https://x.com/verihut_?s=21
+   - X -  https://x.com/verihut_?s=21
+
+### Demo Video
+   - https://youtu.be/NLL3HNi_09o
+
+### Pitch Deck
+   -  https://drive.google.com/file/d/10826Efb1xGx4Fko4Gji9E-PVFEMZvIcr/view?usp=sharing
+
+### Prototype (Figma)
+   -  https://www.figma.com/design/7RlNPBquey1kOxcYji3PTt/NERV---Veri-Hub?node-id=902-15148&t=SIr1iDik1FVjd1uh-0
