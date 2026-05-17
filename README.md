@@ -1,115 +1,405 @@
 # Veri Hut
 
-🚀 **Veri Hut** is a decentralized Web3 social platform built for **creators, gamers, and communities**.  
-It combines **user-generated content, live streaming, monetization, video clipping, and mini-gaming** — powered by the **Very Network (an EVM-compatible blockchain)**.
+🚀 **Veri Hut** is a decentralized creator, gaming, and social engagement platform designed to expand real-world adoption of Web3 experiences through the :contentReference[oaicite:0]{index=0} ecosystem and Soroban smart contracts.
 
-> ✅ Built as part of the **Very Network Hackathon** — "Build the Future of Web3".
+Built as an open social infrastructure layer, Veri Hut combines:
 
----
+- user-generated content
+- livestreaming
+- creator monetization
+- gamified engagement
+- mini-app discovery
+- social commerce
+- community-driven rewards
 
-## 🌍 Why Veri Hut?
-Most hackathon projects never make it past a demo. **Veri Hut is different**:  
-- We’re building a **real product** with **real-world utility**.  
-- Designed for **creators who want ownership** of their content and earnings.  
-- Built for **users who want more than likes** — they can Create, Earn, Sell and Engage.  
+—all within a decentralized environment powered by Stellar-compatible technologies.
 
----
-
-## ✨ Core Features
-1. **User-Generated Content (UGC)**  
-   - Post text, images, and short videos.  
-   - Optional **token-gated posting** for high-quality feeds.  
-
-2. **Live Streaming**  
-   - Stream gameplay or IRL directly from mobile/desktop.  
-   - Live chat linked with **Verychat** groups.  
-   - **Tip streamers** in VERY tokens.  
-
-3. **Monetization Tools**  
-   - VERY token tipping.  
-   - Paid subscriptions for exclusive content.  
-   - NFT sales for premium experiences.  
-
-4. **Video Clipping & Sharing**  
-   - Clip moments from streams/videos.  
-   - Clips stored on **IPFS/Arweave** for permanence.  
-   - Clips can be tipped, shared, or remixed.  
-
-5. **Mini-App Integration**  
-   -The Mini App feature allows any developer building on VeryChain to list their dApp or product inside Verihut.
-   - Creators can discover these mini apps, create content around them (posts, streams, clips), and earn points or commissions.
-   - Users can engage with mini apps directly through creator content, boosting adoption and usage.
-   who actively promote or engage with mini apps rack up points, helping them climb the leaderboard and gain visibility/rewards.
-
-6. **Leaderboard Feature (Gamified Social + Commerce)**
-   -The leaderboard is designed to reward activity, visibility, and performance across Verihut. It motivates creators, merchants, and even fans to stay engaged.
-   
-   **How it works:**
-   Creators:
-   - Ranked based on content engagement (likes, shares, tips, purchases driven).
-   - Top creators get featured spots (homepage, discovery feed).
-   -  Higher rank → higher visibility → more chances to earn.
-
-   Merchants:
-   - Ranked by sales, product popularity, and creator collaborations.
-   - Merchants in the leaderboard get boosted exposure to fans.
-   - Encourages merchants to partner with creators.
-
-   Fans/Users:
-   - Ranked by engagement (tipping, commenting, sharing, buying).
-   - Active fans get badges or small rewards (discounts, tokens, early access).
-
-   **Why it matters:**
-   -  Pushes creators to post more & collaborate with merchants.
-   -  Encourages merchants to reward creators fairly.
-   -  Gives fans a reason to engage beyond passive scrolling.
-
-7  **VeriShop (Merchant Shops)**
-   -  Merchants can list a product (photo + description + price).
-   -  Buyers can click → see product → “Buy Now” with instant payment (crypto) (Fiat coming ) 
-
-   -  Creators can collaborate with merchants by promoting products using their unique referral links. - -  When buyers purchase through these links, the merchant makes the sale while the creator earns a commission aligning incentives for both sides.
-
-8  **wallet** 
-   -  The verychain wallet will be integrated in the VeriHut platform so that users, fans and creators can be able make purchases, tip and also send/receive money to/from friends while in the platform.
-   
----
-
-## 💰 Token Economy
-- **Creators earn:** tips, ad revenue share, NFT sales.  
-- **Viewers earn:** engagement rewards, game prizes.  
-- **Staking model:** stake VERY tokens to boost content visibility.  
+> ✅ Built as part of the “Build the Future of Web3” initiative with a long-term vision of becoming a production-ready open-source ecosystem project.
 
 ---
 
-## 🏆 Minimum Viable Product (MVP)
-Our MVP focuses on:  
-- ✅ User-Generated Posts (text, images, short videos).  
-- ✅ Feed page to display posts.  
-- ✅ Live streaming with tipping support.  
-- ✅ Basic monetization via VERY token tips.  
+# 🌍 Why Veri Hut?
 
-> 🎯 Goal: Deliver a **working MVP** that creators and communities can use on Very Network — not just a proof-of-concept.
+Most social platforms centralize ownership, monetization, and visibility.
 
----
+Veri Hut is designed differently.
 
-## 🛠️ Tech Stack
-- **Frontend:** Next.js (TypeScript, TailwindCSS)  
-- **Backend:** Django REST Framework  
-- **Smart Contracts:** Solidity (EVM-compatible, deployed on Verychain)  
-- **Storage:** IPFS/Arweave for permanent clips  
-- **Integration:** Verychat for real-time community chat  
+The platform aims to empower:
+
+- creators who want ownership of their content and revenue
+- gamers who want portable digital identity and rewards
+- communities who want transparent engagement systems
+- developers who want distribution and discovery for their applications
+- merchants who want direct creator-driven commerce
+
+At the ecosystem level, Veri Hut is designed to help expand the practical utility of the Stellar ecosystem by providing real-world social and creator economy use cases for Soroban smart contracts and decentralized payments.
 
 ---
 
-## 🧑‍💻 Project Structure
+# ⭐ How Veri Hut Benefits the Stellar Ecosystem
+
+Veri Hut is intentionally designed to contribute to the growth of the Stellar ecosystem through:
+
+## 🚀 Expanding Soroban Use Cases
+
+The platform introduces real-world Web3 social and creator-economy use cases such as:
+
+- creator tipping
+- on-chain rewards
+- engagement tracking
+- decentralized monetization
+- social commerce
+- NFT-based experiences
+- reputation systems
+- leaderboard infrastructure
+
+This helps demonstrate practical applications of Soroban beyond traditional DeFi.
+
+---
+
+## 👨‍💻 Developer Onboarding
+
+Veri Hut creates opportunities for developers to contribute across:
+
+- smart contracts
+- frontend systems
+- realtime infrastructure
+- decentralized storage
+- wallet integrations
+- analytics systems
+- creator monetization tools
+
+The repository is structured to support contributor-friendly development and ecosystem collaboration initiatives such as Drip Wave.
+
+---
+
+## 🌐 Open-Source Reference Infrastructure
+
+The project aims to evolve into a reusable reference architecture for:
+
+- creator economy dApps
+- decentralized social platforms
+- Web3 livestreaming systems
+- wallet-integrated applications
+- gamified engagement systems
+- Soroban-powered community products
+
+This can help accelerate future development across the Stellar ecosystem.
+
+---
+
+## 💸 Real Utility for Stellar Payments
+
+Veri Hut introduces practical payment flows including:
+
+- creator tipping
+- merchant purchases
+- referral commissions
+- subscriptions
+- peer-to-peer transfers
+- engagement rewards
+
+These use cases help increase real transactional utility within the Stellar ecosystem.
+
+---
+
+# ✨ Core Features
+
+## 1. User-Generated Content (UGC)
+
+Users can:
+
+- create posts
+- upload images
+- share short-form videos
+- interact with creators and communities
+
+Future roadmap features may include:
+
+- decentralized identity integration
+- wallet-linked creator profiles
+- token-gated content systems
+- Soroban-powered engagement rewards
+
+---
+
+## 2. Live Streaming
+
+Creators can:
+
+- livestream gameplay or IRL content
+- interact with communities in realtime
+- receive tips directly from viewers
+- engage audiences through decentralized monetization
+
+Future infrastructure plans include:
+
+- realtime streaming systems
+- wallet-based tipping
+- decentralized creator rewards
+- scalable event-driven architecture
+
+---
+
+## 3. Monetization Tools
+
+Veri Hut is designed to support creator monetization through:
+
+- token tipping
+- premium subscriptions
+- NFT-based experiences
+- creator referral systems
+- merchant collaborations
+- engagement incentives
+
+Potential Soroban integrations may support:
+
+- automated payout logic
+- revenue distribution
+- creator reward systems
+- transparent commission handling
+
+---
+
+## 4. Video Clipping & Sharing
+
+Users can:
+
+- clip livestream moments
+- remix content
+- share highlights
+- archive memorable content permanently
+
+Storage plans include:
+
+- IPFS
+- decentralized storage systems
+- permanent content persistence
+
+---
+
+## 5. Mini-App Ecosystem
+
+Veri Hut includes a mini-app discovery layer where developers can:
+
+- list applications
+- showcase products
+- onboard users
+- gain creator-driven visibility
+
+Creators can:
+
+- promote mini apps
+- create content around products
+- drive usage and adoption
+- earn commissions or rewards
+
+This creates a network effect that benefits developers building within the ecosystem.
+
+---
+
+## 6. Gamified Leaderboards
+
+The leaderboard system rewards:
+
+- creators
+- merchants
+- fans
+- communities
+
+### Creator Rankings
+
+Creators are ranked based on:
+
+- engagement
+- content performance
+- tipping activity
+- purchases driven
+- audience growth
+
+Higher visibility leads to greater monetization opportunities.
+
+### Merchant Rankings
+
+Merchants are ranked by:
+
+- sales performance
+- creator collaborations
+- customer engagement
+- product popularity
+
+### Fan Rankings
+
+Fans are rewarded for:
+
+- engagement
+- participation
+- tipping
+- sharing
+- purchases
+
+This transforms users from passive consumers into active ecosystem participants.
+
+---
+
+## 7. VeriShop (Social Commerce)
+
+Merchants can:
+
+- list products
+- sell directly to users
+- collaborate with creators
+- leverage referral systems
+
+Creators can:
+
+- promote merchant products
+- earn referral commissions
+- build monetized communities
+
+This bridges decentralized commerce with creator-driven distribution.
+
+---
+
+## 8. Wallet Integration
+
+Future wallet infrastructure aims to support:
+
+- wallet-based authentication
+- creator payments
+- peer-to-peer transfers
+- tipping systems
+- reward distribution
+- decentralized identity
+
+Potential Stellar ecosystem integrations may include:
+
+- Freighter Wallet
+- WalletKit
+- Soroban transaction signing
+- Stellar account management
+
+---
+
+# 💰 Token Economy
+
+The platform is designed around a community-driven reward system.
+
+## Creators Earn Through:
+
+- tips
+- subscriptions
+- referrals
+- NFT experiences
+- community engagement
+
+## Viewers Earn Through:
+
+- participation
+- community engagement
+- leaderboard activity
+- ecosystem rewards
+
+## Staking Utility
+
+Future staking models may allow users to:
+
+- boost visibility
+- unlock premium experiences
+- increase creator exposure
+- participate in ecosystem governance
+
+---
+
+# 🏆 MVP Scope
+
+The current MVP focuses on delivering:
+
+- ✅ user-generated posts
+- ✅ social content feed
+- ✅ livestream UI infrastructure
+- ✅ creator tipping systems
+- ✅ gamified engagement experiences
+
+> 🎯 The goal is to build a production-oriented creator ecosystem rather than a temporary hackathon prototype.
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- Next.js
+- TypeScript
+- TailwindCSS
+
+## Backend
+- Django REST Framework
+
+## Smart Contracts
+- Solidity / Soroban-ready architecture
+- EVM-compatible integrations
+
+## Storage
+- IPFS
+- decentralized content persistence
+
+## Realtime Infrastructure
+- livestreaming systems
+- realtime community interactions
+
+---
+
+# 🧑‍💻 Contributor Opportunities
+
+Veri Hut is intentionally structured to support open-source ecosystem contributions.
+
+Potential contribution areas include:
+
+## Frontend
+- accessibility
+- UI systems
+- responsive optimization
+- realtime interfaces
+
+## Backend
+- APIs
+- authentication
+- streaming infrastructure
+- indexing systems
+
+## Smart Contracts
+- tipping systems
+- creator rewards
+- referral infrastructure
+- marketplace logic
+- leaderboard systems
+
+## Stellar / Soroban
+- wallet integrations
+- payment flows
+- decentralized identity
+- transaction systems
+- ecosystem tooling
+
+## Infrastructure
+- CI/CD
+- analytics
+- testing
+- monitoring
+- developer tooling
+
+This makes Veri Hut highly suitable for collaborative development programs like Drip Wave.
+
+---
+
+# 📂 Project Structure
+
+```bash
 veri-hut/
-│── veri-hut-frontend/ # Next.js app
-│── backend/ # Django REST API
-│── solidity/ # Solidity smart contracts
-│── README.md # project overview
-
-
+│── veri-hut-frontend/   # Next.js frontend
+│── backend/             # Django REST API
+│── solidity/            # Smart contracts
+│── README.md            # Project overview
 
 ## 🚀 Getting Started
 
